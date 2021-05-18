@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+
+  <body style="background: white;">
+    <h1>Hello World!</h1>
+      <p>
+          We are using node <script>document.write(process.versions.node)</script>,
+          Chrome <script>document.write(process.versions.chrome)</script>,
+          and Electron <script>document.write(process.versions.electron)</script>.
+      </p>
+    <script>
+      require('./node_modules/jquery/dist/jquery.min.js');
+      require('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
+      require('./renderer.js');
+    </script>
+  </body>
+</html>
