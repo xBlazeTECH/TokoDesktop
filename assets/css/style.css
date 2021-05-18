@@ -1,0 +1,612 @@
+@font-face { 
+
+    font-family: Sevastopol; 
+    src: url('../font/font.TTF'); 
+
+}
+
+.radio-container {
+    
+    /*position: relative;*/
+
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    visibility: visible;
+
+}
+
+.radio-body {
+
+    width: 100%;
+    height: auto;
+
+}
+
+.radio-volume-button {
+
+    position: absolute;
+
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: auto;
+
+    visibility: visible;
+
+}
+
+.radio {
+
+    position: absolute;
+
+    left: 0px;
+    bottom: 0px;
+
+    width: 100%;
+    height: auto;
+
+    visibility: visible;
+
+}
+
+.radio-extra {
+
+    position: absolute;
+
+    width: 100%;
+    height: auto;
+
+    left: 0px;
+    bottom: 0px;
+
+    padding-top: 56.25%;
+
+}
+
+.function-up-button {
+
+    position: absolute;
+
+    left: 46%;
+    bottom: 55%;
+
+    width: 2%;
+    height: 7%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.function-down-button {
+
+    position: absolute;
+
+    left: 44%;
+    bottom: 55%;
+
+    width: 2%;
+    height: 7%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.volume-up-button {
+
+    position: absolute;
+
+    left: 49.55%;
+    bottom: 55%;
+
+    width: 1.75%;
+    height: 10%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.volume-down-button {
+
+    position: absolute;
+
+    left: 47.85%;
+    bottom: 55%;
+
+    width: 1.75%;
+    height: 10%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.channel-desc {
+
+    position: absolute;
+
+    text-align: left;
+    font-family: Sevastopol;
+    font-size: 1.4vw;
+
+    user-select: none;
+
+    left: 46.25%;
+    bottom: 28.5%;
+
+}
+
+.channel-list {
+
+    position: absolute;
+
+    text-align: left;
+    word-wrap: break-word;
+    font-family: Sevastopol;
+    font-size: 1.4vw;
+
+    user-select: none;
+
+    width: 8%;
+    height: 0%;
+
+    left: 46.25%;
+    bottom: 28.5%;
+
+}
+
+
+.channel-id {
+
+    position: absolute;
+
+    text-align: left;
+    font-family: Sevastopol;
+    font-size: 1.4vw;
+
+    user-select: none;
+
+    left: 46.25%;
+    bottom: 27.75%;
+
+}
+
+.channel-name {
+
+    position: absolute;
+
+    text-align: left;
+    font-family: Sevastopol;
+    font-size: 1.6vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    user-select: none;
+
+    left: 46.25%;
+    bottom: 25%;
+
+}
+
+.radio-volume {
+
+    position: absolute;
+
+    text-align: left;
+    font-family: Sevastopol;
+    font-size: 1.4vw;
+
+    user-select: none;
+
+    left: 50%;
+    bottom: 30.9%;
+
+}
+
+.keypad-input {
+
+    position: absolute;
+
+    text-align: left;
+    font-family: Sevastopol;
+    font-size: 1.6vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    user-select: none;
+
+    left: 52.7%;
+    bottom: 25%;
+
+}
+
+.button-panel {
+
+    position: absolute;
+
+    left: 45%;
+    bottom: 5%;
+
+    width: 10%;
+    height: 20%;
+
+}
+
+.button-row-0 {
+
+    position: absolute;
+
+    width: 100%;
+    height: 35%;
+
+    left: 0%;
+    bottom: 55%;
+
+}
+
+.button-p1 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 50%;
+
+    left: 5%;
+    top: 0%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-ok {
+
+    position: absolute;
+
+    width: 25%;
+    height: 50%;
+
+    left: 5%;
+    bottom: 0%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-p2 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 50%;
+
+    right: 3%;
+    top: 0%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-back {
+
+    position: absolute;
+
+    width: 25%;
+    height: 50%;
+
+    right: 3%;
+    bottom: 0%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+    
+}
+
+.button-up {
+
+    position: absolute;
+
+    width: 20%;
+    height: 35%;
+
+    left: 41%;
+    top: 10%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-down {
+
+    position: absolute;
+
+    width: 20%;
+    height: 35%;
+
+    left: 41%;
+    bottom: 0%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-left {
+
+    position: absolute;
+
+    width: 15%;
+    height: 50%;
+
+    left: 30%;
+    bottom: 20%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-right {
+
+    position: absolute;
+
+    width: 15%;
+    height: 50%;
+
+    right: 28%;
+    bottom: 20%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-row-1 {
+
+    position: absolute;
+
+    width: 100%;
+    height: 12.5%;
+
+    left: 0%;
+    bottom: 40%;
+
+}
+
+.button-1 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 7.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-2 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 37.75%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-3 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    right: 5.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-row-2 {
+
+    position: absolute;
+
+    width: 100%;
+    height: 12.5%;
+
+    left: 0%;
+    bottom: 27%;
+
+}
+
+.button-4 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 7.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-5 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 37.75%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-6 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    right: 5.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-row-3 {
+
+    position: absolute;
+
+    width: 100%;
+    height: 12.5%;
+
+    left: 0%;
+    bottom: 13%;
+
+}
+
+.button-7 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 7.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-8 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 37.75%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-9 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    right: 5.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-row-4 {
+
+    position: absolute;
+
+    width: 100%;
+    height: 12.5%;
+
+    left: 0%;
+    bottom: 1%;
+
+}
+
+.button-star {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 7.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-0 {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    left: 37.75%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}
+
+.button-hash {
+
+    position: absolute;
+
+    width: 25%;
+    height: 100%;
+
+    right: 5.5%;
+
+    background: transparent;
+    border: none !important;
+    outline: none;
+
+}

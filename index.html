@@ -1,23 +1,212 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <!-- <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    /> -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
   </head>
 
-  <body style="background: white;">
-    <h1>Hello World!</h1>
-      <p>
-          We are using node <script>document.write(process.versions.node)</script>,
-          Chrome <script>document.write(process.versions.chrome)</script>,
-          and Electron <script>document.write(process.versions.electron)</script>.
-      </p>
+  <body>
+    <div class="radio-container">
+      <div id="radio-body" class="radio-body">
+        <img
+          id="radio-volume-button"
+          class="radio-volume-button"
+          src="https://i.imgur.com/uP0U2JJ.png"
+        />
+
+        <img id="radio" class="radio" src="https://i.imgur.com/y78IqPC.jpg" />
+      </div>
+
+      <div class="radio-extra">
+        <button
+          id="function-up"
+          class="function-up-button"
+          onclick="useFunction('up')"
+        ></button>
+
+        <button
+          id="function-down"
+          class="function-down-button"
+          onclick="useFunction('down')"
+        ></button>
+
+        <button
+          id="volume-up"
+          class="volume-up-button"
+          onclick="radioVolume('up')"
+        ></button>
+
+        <button
+          id="volume-down"
+          class="volume-down-button"
+          onclick="radioVolume('down')"
+        ></button>
+
+        <div id="screen" class="screen" style="visibility: hidden">
+          <div id="main-screen">
+            <p id="channel-id" class="channel-id">Ch 1</p>
+
+            <p id="channel-name" class="channel-name">Channel1</p>
+
+            <p id="keypad-input" class="keypad-input"></p>
+          </div>
+
+          <div id="channel-screen" style="visibility: hidden">
+            <p class="channel-desc">Connected to:</p>
+
+            <p id="channel-list" class="channel-list"></p>
+          </div>
+
+          <p id="radio-volume" class="radio-volume">Volume</p>
+        </div>
+
+        <div class="button-panel">
+          <div class="button-row-0">
+            <button
+              id="button-p1"
+              class="button-p1"
+              onclick="useButton('p1')"
+            ></button>
+
+            <button
+              id="button-ok"
+              class="button-ok"
+              onclick="useButton(true)"
+            ></button>
+
+            <button
+              id="button-up"
+              class="button-up"
+              onclick="useButton('up')"
+            ></button>
+
+            <button
+              id="button-down"
+              class="button-down"
+              onclick="useButton('down')"
+            ></button>
+
+            <button
+              id="button-left"
+              class="button-left"
+              onclick="useButton('left')"
+            ></button>
+
+            <button
+              id="button-right"
+              class="button-right"
+              onclick="useButton('right')"
+            ></button>
+
+            <button
+              id="button-p2"
+              class="button-p2"
+              onclick="useButton('p2')"
+            ></button>
+
+            <button
+              id="button-back"
+              class="button-back"
+              onclick="useButton(false)"
+            ></button>
+          </div>
+
+          <div class="button-row-1">
+            <button
+              id="button-1"
+              class="button-1"
+              onclick="useButton(1)"
+            ></button>
+
+            <button
+              id="button-2"
+              class="button-2"
+              onclick="useButton(2)"
+            ></button>
+
+            <button
+              id="button-3"
+              class="button-3"
+              onclick="useButton(3)"
+            ></button>
+          </div>
+
+          <div class="button-row-2">
+            <button
+              id="button-4"
+              class="button-4"
+              onclick="useButton(4)"
+            ></button>
+
+            <button
+              id="button-5"
+              class="button-5"
+              onclick="useButton(5)"
+            ></button>
+
+            <button
+              id="button-6"
+              class="button-6"
+              onclick="useButton(6)"
+            ></button>
+          </div>
+
+          <div class="button-row-3">
+            <button
+              id="button-7"
+              class="button-7"
+              onclick="useButton(7)"
+            ></button>
+
+            <button
+              id="button-8"
+              class="button-8"
+              onclick="useButton(8)"
+            ></button>
+
+            <button
+              id="button-9"
+              class="button-9"
+              onclick="useButton(9)"
+            ></button>
+          </div>
+
+          <div class="button-row-4">
+            <button
+              id="button-star"
+              class="button-star"
+              onclick="useButton('star')"
+            ></button>
+
+            <button
+              id="button-0"
+              class="button-0"
+              onclick="useButton(0)"
+            ></button>
+
+            <button
+              id="button-hash"
+              class="button-hash"
+              onclick="useButton('hash')"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
-      require('./node_modules/jquery/dist/jquery.min.js');
-      require('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
-      require('./renderer.js');
+      $ = require("./node_modules/jquery/dist/jquery.min.js");
+      require("./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js");
+      require("./renderer.js");
     </script>
   </body>
+  <script src="assets/js/script.js" type="text/javascript"></script>
 </html>
