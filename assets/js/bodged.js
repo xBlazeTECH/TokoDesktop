@@ -14,6 +14,31 @@ const RADIO_IMG = {
   radio_volume_10: "https://i.imgur.com/E3sck89.png",
 };
 
+const RADIO_GITHUB = {
+  radio_volume_0:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_0.png?raw=true",
+  radio_volume_1:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_1.png?raw=true",
+  radio_volume_2:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_2.png?raw=true",
+  radio_volume_3:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_3.png?raw=true",
+  radio_volume_4:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_4.png?raw=true",
+  radio_volume_5:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_5.png?raw=true",
+  radio_volume_6:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_6.png?raw=true",
+  radio_volume_7:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_7.png?raw=true",
+  radio_volume_8:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_8.png?raw=true",
+  radio_volume_9:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_9.png?raw=true",
+  radio_volume_10:
+    "https://github.com/xBlazeTECH/TokoDesktop/blob/main/assets/img/radio_volume_10.png?raw=true",
+};
+
 var radio = {
   /* CONFIG */
 
@@ -323,10 +348,50 @@ function radioVolume(input) {
 
   $("#radio-volume").text("Volume: " + radio.volume);
 
-  $("#radio-volume-button").attr(
-    "src",
-    "images/radio_volume_" + radio.volume + ".png"
-  );
+  let radio_vol_url = "";
+
+  switch (radio.volume) {
+    case 1:
+      radio_vol_url = RADIO_GITHUB.radio_volume_1;
+      break;
+    case 2:
+      radio_vol_url = RADIO_GITHUB.radio_volume_2;
+      break;
+    case 3:
+      radio_vol_url = RADIO_GITHUB.radio_volume_3;
+      break;
+    case 4:
+      radio_vol_url = RADIO_GITHUB.radio_volume_4;
+      break;
+    case 5:
+      radio_vol_url = RADIO_GITHUB.radio_volume_5;
+      break;
+    case 6:
+      radio_vol_url = RADIO_GITHUB.radio_volume_6;
+      break;
+    case 7:
+      radio_vol_url = RADIO_GITHUB.radio_volume_7;
+      break;
+    case 8:
+      radio_vol_url = RADIO_GITHUB.radio_volume_8;
+      break;
+    case 9:
+      radio_vol_url = RADIO_GITHUB.radio_volume_9;
+      break;
+    case 10:
+      radio_vol_url = RADIO_GITHUB.radio_volume_10;
+      break;
+    default:
+      radio_vol_url = RADIO_GITHUB.radio_volume_0;
+      break;
+  }
+
+  $("#radio-volume-button").attr("src",radio_vol_url)
+
+  // $("#radio-volume-button").attr(
+  //   "src",
+  //   "images/radio_volume_" + radio.volume + ".png"
+  // );
 
   $.post(
     "https://bodged-radio/radioVolume",
@@ -500,6 +565,10 @@ $(function() {
       openUI();
     }
   });
+
+  openUI();
+
+  initToko();
 })
 
 // Functions used for keybinds.

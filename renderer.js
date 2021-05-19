@@ -1,3 +1,1 @@
-
-
 let $ = (jQuery = require("jquery"));

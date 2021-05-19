@@ -2,8 +2,10 @@ const { app, BrowserWindow } = require("electron");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1920,
-    height: 1080,
+    width: 842,
+    height: 500,
+    // width: 600,
+    // height: 800,
     webPreferences: {
       nodeIntegration: true,
     },
@@ -27,3 +29,5 @@ app.on("activate", () => {
     createWindow();
   }
 });
+
+const toko = require('./toko.js');

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World!</title>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/bodged.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/toko.css" type="text/css" />
     <!-- <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -12,9 +13,81 @@
       http-equiv="Content-Security-Policy"
       content="script-src 'self' 'unsafe-inline';"
     />
+    <style>
+      .tokovoipInfo {
+        position: absolute;
+        padding: 5px;
+        font-family: Arial;
+        font-weight: bold;
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
+    <div id="pluginScreen" class="pluginScreen">
+      <div id="pluginScreenWindow" class="pluginScreenWindow">
+        <div
+          style="
+            font-size: 25px;
+            color: #ffffffab;
+            text-align: center;
+            margin-bottom: 20px;
+          "
+        >
+          TokoVOIP 1.5
+        </div>
+        <font style="color: #ffffffab">TokoVOIP</font> is our in-game VOIP
+        replacement, using a custom made TS Plugin.
+
+        <br /><br />
+
+        It gives us a lot more possibilities, which currently allow such things
+        as:
+        <ul>
+          <li>Better voice quality</li>
+          <li>Radio system</li>
+          <li>Proximity chat unique to each player</li>
+          <li>Phone calls</li>
+          <li>Radio clicks</li>
+          <li>Radio effects</li>
+        </ul>
+
+        <font style="color: #ffffffab">TokoVOIP</font> has to be
+        <font color="#d62323">installed</font> and
+        <font color="#d62323"> running </font> to play on our servers.
+        <br /><br />
+        You can find more <font color="#f0eb01">information</font> and
+        <font color="#f0eb01">download</font> links at:
+        <font color="#1a79ff" id="TSDownload"
+          >https://voip.itokoyamato.net/</font
+        >
+        <br /><br />
+
+        <div id="TSServer">TeamSpeak server:</div>
+        <div id="TSChannel">TeamSpeak channel:</div>
+        <br />
+        Status:
+        <ul>
+          <li id="pluginStatus">
+            Plugin status: <font color="red">OFFLINE</font>
+          </li>
+          <li id="FiveMState">
+            FiveM websocket: <font color="red">Not connected</font>
+          </li>
+          <li id="Ts3State">
+            Ts3 websocket: <font color="red">Not connected</font>
+          </li>
+          <br />
+          <li id="pluginVersion">
+            Plugin version: <font color="red">Not found</font> (Required: 1.5.0)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyrights">TokoVoip by Itokoyamato</div>
+    <div id="tokovoipInfo" class="tokovoipInfo"></div>
+    <div id="latency" style="display: none"></div>
     <div class="radio-container">
       <div id="radio-body" class="radio-body">
         <img
@@ -208,5 +281,6 @@
       require("./renderer.js");
     </script>
   </body>
-  <script src="assets/js/script.js" type="text/javascript"></script>
+  <script src="assets/js/bodged.js" type="text/javascript"></script>
+  <script src="assets/js/toko.js" type="text/javascript"></script>
 </html>
